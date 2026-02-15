@@ -1,0 +1,41 @@
+# Archivos de Sysand
+.sysand/
+sysand-lock.toml
+
+# Build artifacts
+build/
+dist/
+*.ast
+*.json.bak
+
+# Archivos temporales de Syside
+.syside/
+*.sysml.cache
+
+# Archivos del sistema
+.DS_Store
+Thumbs.db
+*.tmp
+*.swp
+*.swo
+
+# IDEs y editores
+.vscode/
+.idea/
+*.sublime-*
+.project
+.settings/
+
+# Logs
+*.log
+logs/
+
+# Node modules (si usas herramientas JS)
+node_modules/
+
+# Python (si usas scripts de Python)
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/

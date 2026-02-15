@@ -1,0 +1,35 @@
+{
+  "name": "my_project",
+  "version": "0.1.0",
+  "description": "Proyecto de intercambio mínimo con Sysand y SysML v2",
+  "type": "sysmlv2-interchange",
+  "metadata": {
+    "standard": "SysML v2",
+    "format": "textual",
+    "toolchain": "Syside",
+    "created": "2026-02-15",
+    "lastModified": "2026-02-15"
+  },
+  "structure": {
+    "models": ["models", "src"],
+    "documentation": ["docs"],
+    "root": "."
+  },
+  "dependencies": [],
+  "interchange": {
+    "format": "json",
+    "version": "1.0",
+    "exportable": true,
+    "importable": true
+  },
+  "build": {
+    "validate": true,
+    "format": true,
+    "outputDir": "build"
+  },
+  "scripts": {
+    "validate": "syside check models/**/*.sysml",
+    "format": "syside format models/**/*.sysml",
+    "build": "sysand build"
+  }
+}

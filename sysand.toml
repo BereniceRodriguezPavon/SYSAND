@@ -1,0 +1,32 @@
+# Configuración de Sysand para my_project
+[package]
+name = "my_project"
+version = "0.1.0"
+description = "Proyecto de intercambio mínimo con Sysand y SysML v2"
+authors = ["Tu Nombre <tu.email@ejemplo.com>"]
+license = "MIT"
+repository = "https://github.com/usuario/my_project"
+
+# Dependencias de paquetes Sysand
+[dependencies]
+# Ejemplo: agregar dependencias aquí cuando sea necesario
+# sysml-stdlib = { version = "1.0.0", registry = "https://sysand.org" }
+
+# Configuración de rutas del proyecto
+[paths]
+# Carpetas donde están los modelos .sysml
+models = ["models", "src"]
+
+# Configuración de build y validación
+[build]
+# Validar archivos automáticamente con syside
+validate = true
+# Formatear archivos automáticamente
+format = true
+
+# Metadatos del proyecto
+[project]
+# Tipo de proyecto (library, application, interchange)
+type = "interchange"
+# Estándar SysML v2
+standard = "sysmlv2"

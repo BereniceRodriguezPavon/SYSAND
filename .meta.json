@@ -1,0 +1,63 @@
+{
+  "$schema": "https://sysand.org/schemas/meta-v1.json",
+  "projectId": "my_project",
+  "interchange": {
+    "protocol": "sysmlv2-json",
+    "version": "1.0.0",
+    "capabilities": {
+      "import": true,
+      "export": true,
+      "bidirectional": true
+    }
+  },
+  "metadata": {
+    "title": "My Project - SysML v2 Interchange",
+    "description": "Proyecto de intercambio mínimo configurado con Sysand",
+    "authors": [
+      {
+        "name": "Tu Nombre",
+        "email": "tu.email@ejemplo.com",
+        "role": "developer"
+      }
+    ],
+    "license": "MIT",
+    "tags": ["sysmlv2", "sysand", "interchange", "modeling"],
+    "language": "SysML v2",
+    "encoding": "UTF-8"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/usuario/my_project"
+  },
+  "tooling": {
+    "validator": "Syside",
+    "formatter": "Syside",
+    "packageManager": "Sysand",
+    "versionControl": "Git"
+  },
+  "paths": {
+    "models": ["models/**/*.sysml", "src/**/*.sysml"],
+    "documentation": ["docs/**/*.md"],
+    "config": ["sysand.toml", ".project.json", ".meta.json"]
+  },
+  "validation": {
+    "strictMode": true,
+    "checkImports": true,
+    "requireExplicitVisibility": true,
+    "uniquePackageNames": true
+  },
+  "interchange-format": {
+    "inputFormats": ["sysml", "json", "xml"],
+    "outputFormats": ["sysml", "json"],
+    "preserveMetadata": true,
+    "includeStandardLibraries": false
+  },
+  "build": {
+    "timestamp": "2026-02-15T13:46:00Z",
+    "environment": "development",
+    "artifacts": {
+      "outputDir": "build",
+      "formats": ["json", "ast"]
+    }
+  }
+}
